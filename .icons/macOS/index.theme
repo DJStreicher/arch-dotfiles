@@ -1,0 +1,4 @@
+[Icon Theme]
+Name=macOS
+Comment=macOS Cursors with size 24
+Inherits="hicolor"
