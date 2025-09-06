@@ -15,6 +15,8 @@ kitty
 libreoffice-fresh
 linux
 linux-firmware
+linux-headers
+lutris
 mesa-utils
 neovim
 network-manager-applet
