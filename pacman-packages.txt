@@ -5,6 +5,7 @@ discord
 dolphin
 efibootmgr
 firefox
+ghostty
 git
 grub
 htop
@@ -38,6 +39,7 @@ ttf-nerd-fonts-symbols-mono
 unzip
 vulkan-tools
 waybar
+wev
 wireplumber
 wl-clipboard
 wofi
