@@ -4,9 +4,9 @@ clinfo
 discord
 dolphin
 efibootmgr
-firefox
 ghostty
 git
+github-cli
 grub
 htop
 hyprland
@@ -23,7 +23,6 @@ neovim
 network-manager-applet
 noto-fonts-emoji
 npm
-numlockx
 obs-studio
 opencl-headers
 pavucontrol

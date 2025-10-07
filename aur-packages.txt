@@ -7,4 +7,3 @@ opencl-amd
 otf-apple-sf-pro
 python-clickgen
 yay
-yay-debug
