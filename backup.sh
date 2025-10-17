@@ -12,7 +12,7 @@ pacman -Qqem > aur-packages.txt
 echo "[*] Backing up dotfiles..."
 
 # Backup common shell configs if they exist
-for file in .bashrc .bash_profile .bash_logout .zshrc; do
+for file in .bashrc .bash_profile .bash_logout; do
     if [ -f "$HOME/$file" ]; then
         cp "$HOME/$file" .
         echo "✅ Backed up $file"
@@ -28,7 +28,7 @@ rm -rf .config
 mkdir -p .config
 
 # List of .config folders to back up
-CONFIG_DIRS=("hypr" "kitty" "neofetch" "nvim" "tmux" "waybar" "gtk-3.0" "fontconfig")
+CONFIG_DIRS=("hypr" "kitty" "neofetch" "nvim" "tmux" "waybar" "gtk-3.0" "fontconfig" "ghostty")
 
 for dir in "${CONFIG_DIRS[@]}"; do
     src="$HOME/.config/$dir"

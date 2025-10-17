@@ -25,7 +25,7 @@
 
     "modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
     "modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-    "modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","custom/audio-settings", "group/expand-2","group/expand-4","memory","cpu","clock","custom/notification","custom/padd", "custom/power"],
+    "modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","custom/audio-settings", "group/expand-2","group/expand-4","temperature", "memory","cpu","clock","custom/notification","custom/padd", "custom/power"],
 
 
     // sourced from modules based on config.ctl //
@@ -72,7 +72,7 @@
         "rotate": 270,
         "format": "{icon}",
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-        "max-length": 10
+        // "max-length": 10
     },
     "cpu": {
         "interval": 1,
@@ -80,11 +80,19 @@
         "rotate": 270,
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
     },
-
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/devices/pci0000:00/0000:00:03.1/0000:09:00.0/0000:0a:00.0/0000:0b:00.0/hwmon/hwmon2/temp2_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C"
+    },
 
     "mpris": {
-        "format": "{player_icon} {dynamic}",
-        "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+        // "format": "{player_icon} {dynamic}",
+        // "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+        "format": "{player_icon}",
+    "format-paused": "<span color='grey'>{status_icon}</span>",
         "max-length": 50,
         "player-icons": {
             "default": "<span color='grey'>⏸</span>",
@@ -313,7 +321,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%H:%M %d}",
         "rotate": 0,
         "on-click": "/usr/local/bin/ags -t ActivityCenter",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -383,7 +391,7 @@
             "transition-duration": 300,
             "children-class": "not-power",
             "transition-to-left": true,
-            "click-to-reveal": true
+            "click-to-reveal": false
         },
         "modules": ["pulseaudio","pulseaudio/slider"]
     },
@@ -395,7 +403,8 @@
         //  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
         "rotate": 0,
         "format-ethernet": " ",
-        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        // "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "  {ifname} (No IP)",
         "format-disconnected": "󰲛 ",
         "tooltip-format-disconnected": "Disconnected",

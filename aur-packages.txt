@@ -6,4 +6,5 @@ neofetch
 opencl-amd
 otf-apple-sf-pro
 python-clickgen
+winboat
 yay
