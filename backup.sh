@@ -28,7 +28,7 @@ rm -rf .config
 mkdir -p .config
 
 # List of .config folders to back up
-CONFIG_DIRS=("hypr" "kitty" "neofetch" "nvim" "tmux" "waybar" "gtk-3.0" "fontconfig" "ghostty")
+CONFIG_DIRS=("hypr" "kitty" "neofetch" "nvim" "tmux" "waybar" "gtk-3.0" "fontconfig" "ghostty" "rofi")
 
 for dir in "${CONFIG_DIRS[@]}"; do
     src="$HOME/.config/$dir"

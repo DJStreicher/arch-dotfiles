@@ -1,5 +1,6 @@
 base
 base-devel
+bash-completion
 clinfo
 discord
 docker
@@ -7,6 +8,7 @@ docker-compose
 dolphin
 efibootmgr
 freerdp
+ghidra
 ghostty
 git
 github-cli
@@ -35,6 +37,7 @@ pavucontrol
 php
 pipewire-pulse
 ripgrep
+rofi
 rsync
 sddm
 steam
@@ -45,6 +48,7 @@ unzip
 vulkan-tools
 waybar
 wev
+wine
 wireplumber
 wl-clipboard
 wofi

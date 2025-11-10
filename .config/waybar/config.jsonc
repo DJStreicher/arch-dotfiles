@@ -184,6 +184,13 @@
             //"default": "○",
             //"default": "●"
         },
+        // "workspace-taskbar": {
+        //     "enable": true,
+        //     "icon-size": 20,
+        //     "show-name": false,
+        //     "show-all": true,
+        //     "markup": false
+        // }
     },
 
     "wlr/workspaces": {
@@ -391,7 +398,7 @@
             "transition-duration": 300,
             "children-class": "not-power",
             "transition-to-left": true,
-            "click-to-reveal": false
+            "click-to-reveal": true
         },
         "modules": ["pulseaudio","pulseaudio/slider"]
     },
