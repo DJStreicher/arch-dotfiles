@@ -1,10 +1,13 @@
 anydesk-bin
 apple_cursor
 brave-bin
+freetype2-qdoled
 geekbench
 neofetch
 opencl-amd
 otf-apple-sf-pro
 python-clickgen
+r2modman
 winboat
+winbox
 yay

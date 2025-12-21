@@ -14,3 +14,8 @@ fi
 
 echo "Running .bash_profile on VT $XDG_VTNR, DISPLAY=$DISPLAY" >> /tmp/hyprland-start.log
 echo "XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR" >> /tmp/hyprland-start.log
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/dj/.lmstudio/bin"
+# End of LM Studio CLI section
+
