@@ -9,7 +9,7 @@
 # fi
 
 if [[ -z $DISPLAY ]] && [[ $XDG_VTNR -eq 1 ]]; then
-    exec Hyprland
+    exec start-hyprland
 fi
 
 echo "Running .bash_profile on VT $XDG_VTNR, DISPLAY=$DISPLAY" >> /tmp/hyprland-start.log
