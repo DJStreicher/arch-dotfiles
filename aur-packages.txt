@@ -3,14 +3,10 @@ apple_cursor
 brave-bin
 freetype2-qdoled
 geekbench
-heroic-games-launcher
-mpvpaper-stop-git
-neofetch
 opencl-amd
 otf-apple-sf-pro
 python-clickgen
-r2modman
+satisfactory-mod-manager
 waypaper-git
-winboat
 winbox
 yay

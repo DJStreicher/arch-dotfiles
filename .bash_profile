@@ -3,13 +3,15 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-# Only launch Hyprland if we're on the first virtual terminal (e.g., tty1)
-# if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
-#     exec Hyprland
+
+# if [[ -z $DISPLAY ]] && [[ $XDG_VTNR -eq 1 ]]; then
+#     exec start-hyprland || exit
 # fi
 
 if [[ -z $DISPLAY ]] && [[ $XDG_VTNR -eq 1 ]]; then
-    exec start-hyprland
+    export XDG_SESSION_TYPE=wayland
+    export XDG_CURRENT_DESKTOP=Hyprland
+    exec dbus-run-session start-hyprland || exit
 fi
 
 echo "Running .bash_profile on VT $XDG_VTNR, DISPLAY=$DISPLAY" >> /tmp/hyprland-start.log

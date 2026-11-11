@@ -25,7 +25,7 @@
 
     "modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
     "modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-    "modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","custom/audio-settings", "group/expand-2","group/expand-4","temperature", "memory","cpu","clock","custom/notification","custom/padd", "custom/power"],
+    "modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","custom/audio-settings", "temperature", "memory","cpu","clock","custom/notification","custom/padd", "custom/power"],
 
 
     // sourced from modules based on config.ctl //
@@ -178,6 +178,8 @@
 
     "hyprland/workspaces": {
         "format": "{icon}",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e-1\"})'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e+1\"})'",
         "format-icons": {
             "default": " ",
             "active": " ",
@@ -379,17 +381,6 @@
         "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
         "scroll-step": 1,
         "min-length": 2
-    },
-
-    "group/expand-2": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "not-power",
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
-        "modules": ["backlight","backlight/slider","custom/smallspacer","custom/led"]
     },
 
     "group/expand-3": {

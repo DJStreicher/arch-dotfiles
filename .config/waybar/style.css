@@ -13,12 +13,14 @@
 }
 
 window#waybar {
-    background: rgba(15, 15, 23, 0.9); 
+    /* background: rgba(15, 15, 23, 0.9);  */
+    background: transparent;
     /*  border-radius: 15px; */
     /*  border: 2px solid #124323; */
     /* border: 0px solid #9ccfd8; */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* border-radius: 10px; */
+    border: none;
     padding: 2px 2px 2px 0px;
 }
 
@@ -210,7 +212,7 @@ tooltip {
 }
 #temperature {
     color: #908caa;
-    padding-right: 18px;
+    padding-right: 10px;
     padding-left: 10px;
 }
 #cpu{
@@ -389,6 +391,10 @@ tooltip {
     min-width: 25px;
     color: #9ccfd8;
     font-size: 16px;
+}
+
+box#expand {
+    margin-top: 12px;
 }
 
 #group-minimized {
